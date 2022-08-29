@@ -7,7 +7,8 @@ console.log('hello');
 function page(){
     //get div #content
     const content = document.querySelector('#content');
-    document.body.appendChild(content);
+    const body = document.body;
+    body.appendChild(content);
 
     //create header 
     const header = document.createElement('h1');
