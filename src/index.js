@@ -27,7 +27,6 @@ function picture() {
     return pic;
 }
 
-const content = document.getElementById('content');
-content.appendChild(header());
-content.appendChild(mainText());
-content.appendChild(picture());
+document.body.appendChild(header());
+document.body.appendChild(mainText());
+document.body.appendChild(picture());
