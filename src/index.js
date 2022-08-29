@@ -6,8 +6,16 @@ console.log('hello');
 //function ot create page 
 function header(){
     //create header 
-    const header = document.createElement('h1');
-    header.textContent = "RESTAURANT NAME";
+    const header = document.createElement('div');
+    header.setAttribute('class', 'header');
+    
+    //title for header
+    const title = document.createElement('h1');
+    title.textContent = "RESTAURANT NAME";
+    header.appendChild(title);
+    
+    const tabs = document.createElement('div');
+
 
     return header;
 };
