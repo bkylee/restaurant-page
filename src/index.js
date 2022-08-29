@@ -14,7 +14,11 @@ function header(){
     title.textContent = "RESTAURANT NAME";
     header.appendChild(title);
     
+    //tabs and their pages
     const tabs = document.createElement('div');
+    const about = document.createElement('button');
+    const menu = document.createElement('button');
+    const locations = document.createElement('button');
 
 
     return header;
