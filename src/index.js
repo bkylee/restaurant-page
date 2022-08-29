@@ -18,7 +18,7 @@ function header(){
     const tabs = document.createElement('div');
     const about = document.createElement('button');
     const menu = document.createElement('button');
-    const locations = document.createElement('button');
+    const contact = document.createElement('button');
 
 
     return header;
