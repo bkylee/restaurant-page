@@ -3,8 +3,6 @@ import cool from './cool.png';
 import menu from './menu';
 import contact from './contact';
 
-console.log('hello');
-
 //function ot create page 
 function header(){
     //create header 
@@ -20,15 +18,18 @@ function header(){
 
 function mainText() {
     //create main text thing for website 
-    const main = document.createElement('div');
+    const mainHeader = document.createElement('h3');
+    mainHeader.textContent = "About";
+    const main = document.createElement('p');
     main.textContent = "This is text about the restaurant and how awesome it is. I love this restaurant.";
+    mainHeader.appendChild(main);
     
     //add a picture
     const pic = new Image();
     pic.src = cool;
-    main.appendChild(pic);
+    mainHeader.appendChild(pic);
     
-    return main;
+    return mainHeader;
 };
 
 function tabs(){

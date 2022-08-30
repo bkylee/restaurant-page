@@ -1,5 +1,13 @@
+@font-face {
+    font-family: 'Roboto-Regular';
+    src: url('./Roboto-Regular.ttf') format('ttf');
+    font-weight: 600;
+    font-style: normal;
+  }
+
 #content{
     font-size: large;
+    font-family: 'Roboto-Regular';
 }
 
 img{
@@ -18,11 +26,12 @@ button{
     background-color: black;
 }
 
-.header{
-    display:inline-block;
-}
+/* .header{
+    
+} */
 
 .tabs{
     display:flex;
     justify-content: end;
+    align-items: center;
 }
