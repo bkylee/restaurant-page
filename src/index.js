@@ -1,5 +1,6 @@
 import './style.css';
 import cool from './cool.png';
+import menu from 'menu';
 
 console.log('hello');
 
@@ -13,16 +14,36 @@ function header(){
     const title = document.createElement('h1');
     title.textContent = "RESTAURANT NAME";
     header.appendChild(title);
-    
-    //tabs and their pages
-    const tabs = document.createElement('div');
-    const about = document.createElement('button');
-    const menu = document.createElement('button');
-    const contact = document.createElement('button');
-
-
     return header;
 };
+
+function tabs(){
+    //tabs and their pages
+    const tabs = document.createElement('div');
+    
+    const about = document.createElement('button');
+    tabs.appendChild(about);
+    const headPage = header();
+
+    about.addEventListener('click', ()=>{
+        //remove elements from body
+        document.body.removeChild(..);
+        document.body.removeChild(..);
+        document.body.appendChild(headPage);
+    });
+    
+    const menuButton = document.createElement('button');
+    const menuPage = menu;
+    menuButton.addEventListener('click', ()=>{
+        document.body.removeChild(contactPage);
+        document.body.removeChild(headPage);
+        document.body.appendChild(menuPage);
+    })
+
+    const contact = document.createElement('button');
+    
+
+}
 
 function mainText() {
     //create main text thing for website 

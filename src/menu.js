@@ -1,89 +1,99 @@
 function menu(){
     //create menu (ul)
-    const menu = document.createElement('ul');
+    const menuUL = document.createElement('ul');
+    const menu = document.createElement('H2');
     menu.setAttribute('id', 'menu');
     menu.textContent = "Menu";
+    menu.appendChild(menuUL);
 
     //create appetizers (ul)
-    const appetizers = document.createElement('ul');
-    appetizers.setAttribute('class','apps');
+    const appetizersUL = document.createElement('ul');
+    const appetizers = document.createElement ('h3');
+    appetizersUL.setAttribute('class','apps');
     appetizers.textContent = "Appetizers";
-    menu.appendChild(appetizers);
+    appetizers.appendChild(appetizersUL);
+    menuUL.appendChild(appetizers);
 
     //appetizers 
     const app1  = document.createElement('li');
     app1.textContent = "App1";
-    appetizers.appendChild(app1);
+    appetizersUL.appendChild(app1);
 
     const app2  = document.createElement('li');
     app2.textContent = "App2";
-    appetizers.appendChild(app2);
+    appetizersUL.appendChild(app2);
 
     const app3  = document.createElement('li');
     app3.textContent = "App3";
-    appetizers.appendChild(app3);
+    appetizersUL.appendChild(app3);
 
     const app4  = document.createElement('li');
     app4.textContent = "App4";
-    appetizers.appendChild(app4);
+    appetizersUL.appendChild(app4);
 
     const app5  = document.createElement('li');
     app5.textContent = "App5";
-    appetizers.appendChild(app5);
+    appetizersUL.appendChild(app5);
     
     //create mains (ul)
-    const mains = document.createElement('ul');
-    mains.setAttribute('class','mains');
+    const mainsUL = document.createElement('ul');
+    mainsUL.setAttribute('class','mains');
+    
+    const mains = document.createElement('h3');
     mains.textContent= "Mains";
-    menu.appendChild(mains);
+    mains.appendChild(mainsUL);
+
+    menuUL.appendChild(mains);
 
     //mains
     const main1  = document.createElement('li');
     main1.textContent = "Main1";
-    mains.appendChild(main1);
+    mainsUL.appendChild(main1);
 
     const main2  = document.createElement('li');
     main2.textContent = "Main2";
-    mains.appendChild(main2);
+    mainsUL.appendChild(main2);
     
     const main3  = document.createElement('li');
     main3.textContent = "Main3";
-    mains.appendChild(main3);
+    mainsUL.appendChild(main3);
     
     const main4  = document.createElement('li');
     main4.textContent = "Main4";
-    mains.appendChild(main4);
+    mainsUL.appendChild(main4);
     
     const main5  = document.createElement('li');
     main1.textContent = "Main5";
-    mains.appendChild(main5);
+    mainsUL.appendChild(main5);
 
     //create drinks (ul)
-    const drinks = document.createElement('ul');
-    drinks.setAttribute('class','drinks');
+    const drinksUL = document.createElement('ul');
+    drinksUL.setAttribute('class','drinks');
+    const drinks = document.createElement('h3');
     drinks.textContent= "Drinks";
-    menu.appendChild(drinks);
+    drinks.appendChild(drinksUL);
+    menuUL.appendChild(drinks);
 
     //drinks
     const drink1  = document.createElement('li');
     drink1.textContent = "Drink1";
-    drinks.appendChild(drink1);
+    drinksUL.appendChild(drink1);
 
     const drink2  = document.createElement('li');
     drink2.textContent = "Drink2";
-    drinks.appendChild(drink2);
-    
+    drinksUL.appendChild(drink2);
+
     const drink3  = document.createElement('li');
     drink3.textContent = "Drink3";
-    drinks.appendChild(drink3);
+    drinksUL.appendChild(drink3);
     
     const drink4  = document.createElement('li');
     drink4.textContent = "Drink4";
-    drinks.appendChild(drink4);
+    drinksUL.appendChild(drink4);
     
     const drink5  = document.createElement('li');
     drink1.textContent = "Drink5";
-    drinks.appendChild(drink5);
+    drinksUL.appendChild(drink5);
 
     //create desserts (ul)
     const desserts = document.createElement('ul');
