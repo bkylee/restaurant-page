@@ -52,7 +52,7 @@ function tabs(){
     const menuButton = document.createElement('button');
     tabs.appendChild(menuButton);
     //menu page generated from menu module
-    const menuPage = menu;
+    const menuPage = menu();
     menuButton.textContent = "Menu";
     menuButton.addEventListener('click', ()=>{
         document.body.removeChild(contactPage);
@@ -64,7 +64,7 @@ function tabs(){
     const contactButton = document.createElement('button');
     tabs.appendChild(contactButton);
     //contact page generated from contact module
-    const contactPage = contact;
+    const contactPage = contact();
     contactButton.textContent = "Contact";
     contactButton.addEventListener('click', ()=>{
         document.body.removeChild(menuPage);

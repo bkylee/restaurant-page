@@ -1,4 +1,4 @@
-function menu(){
+export default function menu(){
     //create menu (ul)
     const menuUL = document.createElement('ul');
     const menu = document.createElement('H2');
