@@ -34,6 +34,7 @@ function mainText() {
 function tabs(){
     //tabs and their pages
     const tabs = document.createElement('div');
+    tabs.setAttribute('class','tabs');
 
     //create about/default page button
     const about = document.createElement('button');
