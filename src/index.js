@@ -44,7 +44,7 @@ function tabs(){
     about.addEventListener('click', ()=>{
         //remove elements from body
         document.body.removeChild(document.body.lastElementChild);
-        document.body.appendChild(headPage);
+        document.body.appendChild(mainText());
     });
 
     //create menu page button
@@ -69,15 +69,12 @@ function tabs(){
         document.body.appendChild(contactPage);
     });
 
-      //default/about page generated from mainTExt function
-      const headPage = mainText();
-      //append now to set as default screen
-      document.body.appendChild(headPage);
-
     return tabs;
 };
 
+
 document.body.appendChild(header());
 document.body.appendChild(tabs());
+document.body.appendChild(mainText());
 
 
