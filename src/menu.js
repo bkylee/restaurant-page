@@ -96,23 +96,25 @@ function menu(){
     drinksUL.appendChild(drink5);
 
     //create desserts (ul)
-    const desserts = document.createElement('ul');
+    const dessertsUL = document.createElement('ul');
+    const desserts = document.createElement('h3');
     desserts.setAttribute('class','desserts');
     desserts.textContent= "Desserts";
+    desserts.appendChild(dessertsUL);
     menu.appendChild(desserts);
 
     //desserts
     const dessert1  = document.createElement('li');
     dessert1.textContent = "Dessert1";
-    desserts.appendChild(dessert1);
+    dessertsUL.appendChild(dessert1);
 
     const dessert2  = document.createElement('li');
     dessert2.textContent = "Dessert2";
-    desserts.appendChild(dessert2);
+    dessertsUL.appendChild(dessert2);
     
     const dessert3  = document.createElement('li');
     dessert3.textContent = "Dessert3";
-    desserts.appendChild(dessert3);
+    dessertsUL.appendChild(dessert3);
 
     return menu;
 }
