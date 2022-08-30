@@ -43,8 +43,7 @@ function tabs(){
     //event listener to about button 
     about.addEventListener('click', ()=>{
         //remove elements from body
-        document.body.removeChild(contactPage);
-        document.body.removeChild(menuPage);
+        document.body.removeChild(document.body.lastElementChild);
         document.body.appendChild(headPage);
     });
 
@@ -55,8 +54,7 @@ function tabs(){
     const menuPage = menu();
     menuButton.textContent = "Menu";
     menuButton.addEventListener('click', ()=>{
-        document.body.removeChild(contactPage);
-        document.body.removeChild(headPage);
+        document.body.removeChild(document.body.lastElementChild);
         document.body.appendChild(menuPage);
     });
 
@@ -67,8 +65,7 @@ function tabs(){
     const contactPage = contact();
     contactButton.textContent = "Contact";
     contactButton.addEventListener('click', ()=>{
-        document.body.removeChild(menuPage);
-        document.body.removeChild(headPage);
+        document.body.removeChild(document.body.lastElementChild);
         document.body.appendChild(contactPage);
     });
 
