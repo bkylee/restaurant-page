@@ -1,7 +1,7 @@
 import './style.css';
 import cool from './cool.png';
-import menu from 'menu';
-import contact from 'contact';
+import menu from './menu';
+import contact from './contact';
 
 console.log('hello');
 
@@ -22,7 +22,12 @@ function mainText() {
     //create main text thing for website 
     const main = document.createElement('div');
     main.textContent = "This is text about the restaurant and how awesome it is. I love this restaurant.";
-
+    
+    //add a picture
+    const pic = new Image();
+    pic.src = cool;
+    main.appendChild(pic);
+    
     return main;
 };
 
@@ -32,9 +37,8 @@ function tabs(){
 
     //create about/default page button
     const about = document.createElement('button');
+    about.textContent = "About";
     tabs.appendChild(about);
-    //header generated from header function
-    const headPage = mainText();
     
     //event listener to about button 
     about.addEventListener('click', ()=>{
@@ -49,6 +53,7 @@ function tabs(){
     tabs.appendChild(menuButton);
     //menu page generated from menu module
     const menuPage = menu;
+    menuButton.textContent = "Menu";
     menuButton.addEventListener('click', ()=>{
         document.body.removeChild(contactPage);
         document.body.removeChild(headPage);
@@ -66,16 +71,16 @@ function tabs(){
         document.body.removeChild(headPage);
         document.body.appendChild(contactPage);
     });
-}
 
+      //default/about page generated from mainTExt function
+      const headPage = mainText();
+      //append now to set as default screen
+      document.body.appendChild(headPage);
 
-function picture() {
-    const pic = new Image();
-    pic.src = cool;
-
-    return pic;
-}
+    return tabs;
+};
 
 document.body.appendChild(header());
-document.body.appendChild(mainText());
-document.body.appendChild(picture());
+document.body.appendChild(tabs());
+
+
