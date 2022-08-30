@@ -18,22 +18,33 @@ function header(){
     return header;
 };
 
+function mainText() {
+    //create main text thing for website 
+    const main = document.createElement('div');
+    main.textContent = "This is text about the restaurant and how awesome it is. I love this restaurant.";
+
+    return main;
+};
+
 function tabs(){
     //tabs and their pages
     const tabs = document.createElement('div');
 
+    //create about/default page button
     const about = document.createElement('button');
     tabs.appendChild(about);
     //header generated from header function
-    const headPage = header();
-
+    const headPage = mainText();
+    
+    //event listener to about button 
     about.addEventListener('click', ()=>{
         //remove elements from body
         document.body.removeChild(contactPage);
         document.body.removeChild(menuPage);
         document.body.appendChild(headPage);
     });
-    
+
+    //create menu page button
     const menuButton = document.createElement('button');
     tabs.appendChild(menuButton);
     //menu page generated from menu module
@@ -44,6 +55,7 @@ function tabs(){
         document.body.appendChild(menuPage);
     });
 
+    //create contact page button
     const contactButton = document.createElement('button');
     tabs.appendChild(contactButton);
     //contact page generated from contact module
@@ -56,13 +68,6 @@ function tabs(){
     });
 }
 
-function mainText() {
-    //create main text thing for website 
-    const main = document.createElement('div');
-    main.textContent = "This is text about the restaurant and how awesome it is. I love this restaurant.";
-
-    return main;
-};
 
 function picture() {
     const pic = new Image();
