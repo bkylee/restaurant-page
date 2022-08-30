@@ -35,6 +35,7 @@ function menu(){
     const mains = document.createElement('ul');
     mains.setAttribute('class','mains');
     mains.textContent= "Mains";
+    menu.appendChild(mains);
 
     //mains
     const main1  = document.createElement('li');
@@ -61,6 +62,7 @@ function menu(){
     const drinks = document.createElement('ul');
     drinks.setAttribute('class','drinks');
     drinks.textContent= "Drinks";
+    menu.appendChild(drinks);
 
     //drinks
     const drink1  = document.createElement('li');
@@ -87,6 +89,7 @@ function menu(){
     const desserts = document.createElement('ul');
     desserts.setAttribute('class','desserts');
     desserts.textContent= "Desserts";
+    menu.appendChild(desserts);
 
     //desserts
     const dessert1  = document.createElement('li');
@@ -94,10 +97,12 @@ function menu(){
     desserts.appendChild(dessert1);
 
     const dessert2  = document.createElement('li');
-    drink2.textContent = "Dessert2";
-    desserts.appendChild(desserts2);
+    dessert2.textContent = "Dessert2";
+    desserts.appendChild(dessert2);
     
     const dessert3  = document.createElement('li');
-    drink3.textContent = "Dessert3";
+    dessert3.textContent = "Dessert3";
     desserts.appendChild(dessert3);
+
+    return menu;
 }
