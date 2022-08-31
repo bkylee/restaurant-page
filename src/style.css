@@ -1,13 +1,14 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto&display=swap');
+
 @font-face {
-    font-family: 'Roboto-Regular';
-    src: url('./Roboto-Regular.ttf') format('ttf');
-    font-weight: 600;
+    font-family: 'Roboto';
     font-style: normal;
+    font-weight: 400;
+    src: url('https://fonts.googleapis.com/css2?family=Roboto&display=swap');
   }
 
 #content{
     font-size: large;
-    font-family: 'Roboto-Regular';
 }
 
 img{
@@ -18,6 +19,7 @@ img{
 :root{
     background-color: black;
     color: white;
+    font-family: 'Roboto';
 }
 
 button{
