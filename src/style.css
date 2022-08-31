@@ -3,7 +3,7 @@
 @font-face {
     font-family: 'Roboto';
     font-style: normal;
-    font-weight: 400;
+    font-weight: normal;
     src: url('https://fonts.googleapis.com/css2?family=Roboto&display=swap');
   }
 
@@ -20,6 +20,8 @@ img{
     background-color: black;
     color: white;
     font-family: 'Roboto';
+    box-sizing: border-box;
+    font-size: 18px;
 }
 
 button{
@@ -36,4 +38,35 @@ button{
     display:flex;
     justify-content: end;
     align-items: center;
+}
+
+#menu{
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-area: menu;
+    grid-template-areas: 
+    'appetizers mains'
+    'drinks desserts';
+    font-size: 2rem;
+} 
+
+#menu>h3{
+    font-weight: bold;
+    font-size: 1.2rem;
+}
+
+.appetizers{
+    grid-area: appetizers;
+}
+
+.mains{
+    grid-area: mains;
+}
+
+.drinks{
+    grid-area: drinks;
+}
+
+.desserts{
+    grid-area: desserts;
 }

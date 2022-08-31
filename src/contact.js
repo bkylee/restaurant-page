@@ -1,10 +1,15 @@
 export default function contact (){
+    //title of page
     const title = document.createElement('h2');
     title.textContent = "Contact info";
+
+    //wrapper 
+    const wrap = document.createElement('div');
+    title.appendChild(wrap);
     
     //contact UL 
     const cList = document.createElement('ul');
-    title.appendChild(cList);
+    wrap.appendChild(cList);
 
     //contact info LI
     const email = document.createElement('li');

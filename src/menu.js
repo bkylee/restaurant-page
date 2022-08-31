@@ -1,18 +1,20 @@
 export default function menu(){
     //create menu (ul)
-    const menuUL = document.createElement('ul');
-    const menu = document.createElement('H2');
-    menu.setAttribute('id', 'menu');
-    menu.textContent = "Menu";
-    menu.appendChild(menuUL);
+    const menuTitle = document.createElement('H2');
+    menuTitle.textContent = "Menu";
+    
+    //menu container 
+    const menu = document.createElement('div');
+    menu.setAttribute('id','menu');
+    menuTitle.appendChild(menu);
 
     //create appetizers (ul)
     const appetizersUL = document.createElement('ul');
     const appetizers = document.createElement ('h3');
-    appetizersUL.setAttribute('class','apps');
+    appetizersUL.setAttribute('class','appetizers');
     appetizers.textContent = "Appetizers";
     appetizers.appendChild(appetizersUL);
-    menuUL.appendChild(appetizers);
+    menu.appendChild(appetizers);
 
     //appetizers 
     const app1  = document.createElement('li');
@@ -43,7 +45,7 @@ export default function menu(){
     mains.textContent= "Mains";
     mains.appendChild(mainsUL);
 
-    menuUL.appendChild(mains);
+    menu.appendChild(mains);
 
     //mains
     const main1  = document.createElement('li');
@@ -63,7 +65,7 @@ export default function menu(){
     mainsUL.appendChild(main4);
     
     const main5  = document.createElement('li');
-    main1.textContent = "Main5";
+    main5.textContent = "Main5";
     mainsUL.appendChild(main5);
 
     //create drinks (ul)
@@ -72,7 +74,7 @@ export default function menu(){
     const drinks = document.createElement('h3');
     drinks.textContent= "Drinks";
     drinks.appendChild(drinksUL);
-    menuUL.appendChild(drinks);
+    menu.appendChild(drinks);
 
     //drinks
     const drink1  = document.createElement('li');
@@ -92,7 +94,7 @@ export default function menu(){
     drinksUL.appendChild(drink4);
     
     const drink5  = document.createElement('li');
-    drink1.textContent = "Drink5";
+    drink5.textContent = "Drink5";
     drinksUL.appendChild(drink5);
 
     //create desserts (ul)
@@ -116,5 +118,5 @@ export default function menu(){
     dessert3.textContent = "Dessert3";
     dessertsUL.appendChild(dessert3);
 
-    return menu;
+    return menuTitle;
 }
